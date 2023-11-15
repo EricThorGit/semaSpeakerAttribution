@@ -560,9 +560,11 @@ def make_data_module(tokenizer: transformers.PreTrainedTokenizer, args) -> Dict:
             if os.path.exists(dataset_name):
                 try:
                     args.dataset_format = args.dataset_format if args.dataset_format else "input-output"
+                    print(os.getcwd())
                     full_dataset = local_dataset(dataset_name)
                     return full_dataset
-                except:
+                except Exception as e :
+                    print(e)
                     raise ValueError(f"Error loading dataset from {dataset_name}")
             else:
                 raise NotImplementedError(f"Dataset {dataset_name} not implemented yet.")
@@ -807,7 +809,7 @@ def train(custom_args):
 
 if __name__ == "__main__":
     custom_args = {
-        "model_name_or_path": "meta-llama/Llama-2-7b-hf",
+        "model_name_or_path": "LeoLM/leo-hessianai-13b",
         "output_dir": "./output/spkatt-7b-cues",
         "data_seed": 42,
         "save_steps": 200,

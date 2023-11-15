@@ -2,6 +2,6 @@
 **/.chroma/**
 __pycache__
 output
-
+venv
 .idea
 transformed_datasets/prompts_training
