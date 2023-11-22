@@ -800,7 +800,7 @@ print(
 # 7B models
 cues_training_config = {
     "model_name_or_path": "LeoLM/leo-hessianai-7b",
-    "output_dir": "./output/spkatt-13b-cues-leolm",
+    "output_dir": "./output/spkatt-7b-cues-leolm",
     "data_seed": 42,
     "save_steps": 500,
     "evaluation_strategy": "no",
@@ -820,7 +820,7 @@ cues_training_config = {
 }
 roles_training_config = {
     "model_name_or_path": "LeoLM/leo-hessianai-7b",
-    "output_dir": "./output/spkatt-13b-roles-leolm",
+    "output_dir": "./output/spkatt-7b-roles-leolm",
     "data_seed": 42,
     "save_steps": 500,
     "evaluation_strategy": "no",
